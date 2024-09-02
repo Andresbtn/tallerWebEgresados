@@ -1,0 +1,81 @@
+/* Cambia el fondo del header a verde medio */
+.bg-custom {
+    background-color: #4CAF50;
+    /* Verde medio */
+    color: white;
+    /* Color del texto */
+}
+
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Estilos para las tarjetas de perfil */
+.card {
+    border: 1px solid #54b527;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(8, 174, 19, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #044416;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4CAF50;
+}
+
+/* Estilos para el formulario */
+.form-group label {
+    font-weight: bold;
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
+
+/* Espaciado para la sección de contacto */
+#formularioContacto {
+    margin-top: 20px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Perfiles de Egresados</title>
+</head>
+
+<body>
+    <header class="bg-custom text-center py-4">
+        <h1>Perfiles de Egresados</h1>
+        <p>Conoce a nuestros egresados y sus habilidades</p>
+    </header>
+    <main class="container my-5">
+        <!-- Filtro de Perfiles -->
+        <section id="filtros" class="my-4">
+            <h2>Filtrar Perfiles</h2>
+            <form id="form-filtros" class="mb-4">
+                <div class="form-group">
+                    <label for="habilidades">Habilidades</label>
+                    <select id="habilidades" class="form-control" multiple>
+                        <option value="Java">Java</option>
+                        <option value="Spring">Spring</option>
+                        <option value="HTML/CSS">HTML/CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="React">React</option>
+                        <option value="Python">Python</option>
+                        <option value="SQL">SQL</option>
+                        <option value="Data Visualization">Data Visualization</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experiencia">Años de Experiencia</label>
+                    <input type="number" id="experiencia" class="form-control" placeholder="Ingrese el mínimo de años">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="filtrarPerfiles()">Filtrar</button>
+            </form>
+        </section>
+
+        <!-- Perfiles de Egresados -->
+        <div id="perfiles" class="row">
+            <div class="col-md-4 mb-4 perfil" data-habilidades="Java,Spring,HTML/CSS" data-experiencia="2">
+                <div class="card">
+                    <img src="images/perfil1.jpg" class="card-img-top" alt="Perfil Juan Pérez">
+                    <div class="card-body">
+                        <h5 class="card-title">Juan Pérez</h5>
+                        <p class="card-text">Desarrollador de Software con experiencia en Java y Spring. Apasionado por la tecnología y la resolución de problemas.</p>
+                        <h6>Habilidades:</h6>
+                        <ul>
+                            <li>Java</li>
+                            <li>Spring</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                        <h6>Experiencia:</h6>
+                        <p>Empresa XYZ, Desarrollador, 2019-2021</p>
+                        <a href="#formularioContacto" class="btn btn-primary">Contactar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 perfil" data-habilidades="JavaScript,React,CSS" data-experiencia="1">
+                <div class="card">
+                    <img src="images/perfil2.jpg" class="card-img-top" alt="Perfil María Gómez">
+                    <div class="card-body">
+                        <h5 class="card-title">María Gómez</h5>
+                        <p class="card-text">Ingeniera de Sistemas con experiencia en desarrollo front-end y diseño de interfaces de usuario.</p>
+                        <h6>Habilidades:</h6>
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>CSS</li>
+                        </ul>
+                        <h6>Experiencia:</h6>
+                        <p>Empresa ABC, Front-End Developer, 2020-2022</p>
+                        <a href="#formularioContacto" class="btn btn-primary">Contactar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 perfil" data-habilidades="Python,SQL,Data Visualization" data-experiencia="3">
+                <div class="card">
+                    <img src="images/perfil3.jpg" class="card-img-top" alt="Perfil Carlos Ruiz">
+                    <div class="card-body">
+                        <h5 class="card-title">Carlos Ruiz</h5>
+                        <p class="card-text">Analista de Datos con habilidades en Python y SQL, enfocado en la toma de decisiones basadas en datos.</p>
+                        <h6>Habilidades:</h6>
+                        <ul>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                        <h6>Experiencia:</h6>
+                        <p>Empresa DEF, Data Analyst, 2018-2021</p>
+                        <a href="#formularioContacto" class="btn btn-primary">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="formularioContacto" class="my-5">
+            <h2>Contacto</h2>
+            <form id="formularioContacto" method="POST" action="ContactoServlet">
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fechaCierre">Fecha de Cierre</label>
+                    <input type="date" class="form-control" id="fechaCierre" name="fechaCierre" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Universidad El Bosque</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
